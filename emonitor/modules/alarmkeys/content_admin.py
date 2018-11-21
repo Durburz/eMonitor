@@ -159,6 +159,14 @@ def getAdminContent(self, **params):
         if depid == 0:  # edit options
             params.update({'aksets': AlarmkeySet.getAlarmkeySets(), 'departments': Department.getDepartments(), 'akbases': AlarmkeySet.getBases()})
             return render_template('admin.alarmkeys.set_list.html', **params)
+      
+        alarmkeys_count = []
+        ak = Alarmkey
+        counted_keys = db.get(ak.category.label('category'), func.count(ak.key).label('key'), ak.id.label('id')).group_by(ak.category, ak.id)
+        _sum = 0
+        for r in counted_keys.all():
+            alarmkeys_count.append([r.category, r.key, r.id])
+            _sum += int(r.key)
 
         params.update({'depid': depid, 'defaultcars': Alarmkey.getDefault(depid), 'aksets': AlarmkeySet.getAlarmkeySets()})
         return render_template('admin.alarmkeys.html', **params)

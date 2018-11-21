@@ -29,6 +29,10 @@ msgstr ""
 msgid "trigger.file_removed"
 msgstr ""
 
+#: emonitor/admin/admin.py:69
+msgid "trigger.incoming_serial_data"
+msgstr ""
+
 #: emonitor/admin/web/templates/admin.dbrevision.html:5
 msgid "admin.db.updatetitle"
 msgstr ""

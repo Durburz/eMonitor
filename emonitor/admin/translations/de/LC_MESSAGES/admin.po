@@ -1,6 +1,7 @@
-# Copyright (C) 2014 ORGANIZATION
+# German translations for PROJECT.
+# Copyright (C) 2016 ORGANIZATION
 # This file is distributed under the same license as the PROJECT project.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2014.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
 #
 msgid ""
 msgstr ""
@@ -28,6 +29,10 @@ msgstr "Observer - Datei hinzugefügt"
 #: emonitor/admin/admin.py:68
 msgid "trigger.file_removed"
 msgstr "Observer - Datei entfernt"
+
+#: emonitor/admin/admin.py:69
+msgid "trigger.incoming_serial_data"
+msgstr "Observer - Eingehende serielle Alarmnachricht"
 
 #: emonitor/admin/web/templates/admin.dbrevision.html:5
 msgid "admin.db.updatetitle"
@@ -75,7 +80,3 @@ msgstr "Schließen"
 #: emonitor/admin/web/templates/admin.html:130
 msgid "layout.closed"
 msgstr "Öffnen"
-
-#~ msgid "admin.monitorlink"
-#~ msgstr "Monitoroberfläche"
-
